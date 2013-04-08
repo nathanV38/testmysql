@@ -1,0 +1,33 @@
+<h1>Listing drsses</h1>
+
+<table>
+  <tr>
+    <th>Size</th>
+    <th>Price</th>
+    <th>Brand</th>
+    <th>Comment</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @drsses.each do |drss| %>
+  <tr>
+    <td><%= drss.size %></td>
+    <td><%= drss.price %></td>
+    <td><%= drss.brand %></td>
+    <td><%= drss.comment %></td>
+    <td><%= link_to 'Show', drss %></td>
+	
+    <td><%= link_to 'Edit', edit_drss_path(drss) %></td>
+    <td><%= link_to 'Destroy', drss, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+	
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Drss', new_drss_path %>
+</br>
+<%= link_to 'back to home', home_index_path %>

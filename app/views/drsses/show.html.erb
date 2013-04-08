@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Size:</b>
+  <%= @drss.size %>
+</p>
+
+<p>
+  <b>Price:</b>
+  <%= @drss.price %>
+</p>
+
+<p>
+  <b>Brand:</b>
+  <%= @drss.brand %>
+</p>
+
+<p>
+  <b>Comment:</b>
+  <%= @drss.comment %>
+</p>
+
+
+<%= link_to 'Edit', edit_drss_path(@drss) %> |
+<%= link_to 'Back', drsses_path %>
